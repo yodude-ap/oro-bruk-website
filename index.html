@@ -62,13 +62,13 @@
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen">
 
-    <!-- Navigation (Changes to transparent on scroll) -->
+    <!-- Navigation -->
     <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-paper">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <div id="header-inner" class="flex justify-between items-center py-4 transition-all duration-300">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="assets/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=OB&background=8B0000&color=fff&size=80 rounded-full'" alt="Oro Bruk Logo" class="h-16 w-16 lg:h-20 lg:w-20 object-cover rounded-full shadow-sm">
+                    <img src="assets/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=OB&background=transparent&color=8B0000&size=100'" alt="Oro Bruk Logo" class="h-20 w-20 lg:h-24 lg:w-24 object-contain drop-shadow-sm transition-all duration-300">
                     <span class="font-serif font-bold text-xl md:text-2xl text-monpa-red tracking-wide drop-shadow-sm">Oro Bruk Federation</span>
                 </div>
 
@@ -83,7 +83,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-monpa-black hover:text-monpa-red focus:outline-none p-2">
+                    <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="text-monpa-black hover:text-monpa-red focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,13 +97,13 @@
                 <a href="#story" class="mobile-link block px-3 py-3 text-base font-medium text-slate hover:text-monpa-red hover:bg-gray-50 border-b border-gray-100">Our Story</a>
                 <a href="#pillars" class="mobile-link block px-3 py-3 text-base font-medium text-slate hover:text-monpa-red hover:bg-gray-50 border-b border-gray-100">Pillars</a>
                 <a href="#catalog" class="mobile-link block px-3 py-3 text-base font-medium text-slate hover:text-monpa-red hover:bg-gray-50 border-b border-gray-100">Textile Catalog</a>
-                <a href="#contact" class="block text-center bg-monpa-black text-monpa-white px-4 py-3 mt-4 rounded-sm font-medium shadow-md">Support Our Cause</a>
+                <a href="#contact" class="mobile-link block text-center bg-monpa-black text-monpa-white px-4 py-3 mt-4 rounded-sm font-medium shadow-md">Support Our Cause</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-28 lg:pt-0 min-h-[90vh] flex items-center relative bg-paper">
+    <section id="home" class="pt-28 lg:pt-0 min-h-[90vh] flex items-center relative bg-paper scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 py-10 lg:py-20">
                 
@@ -148,25 +148,25 @@
     </section>
 
     <!-- Founder's Vision Section -->
-    <section id="founder" class="py-16 md:py-24 bg-monpa-white border-y border-gray-200">
+    <section id="founder" class="py-16 md:py-24 bg-monpa-white border-t border-gray-200 scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                 <!-- Founder Image -->
                 <div class="w-full lg:w-5/12">
                     <div class="relative">
                         <div class="absolute inset-0 bg-monpa-red translate-x-4 translate-y-4 rounded-sm"></div>
-                        <img src="assets/owner.webp" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800'" alt="Miss Tenzin Metoh" class="relative w-full h-[500px] object-cover rounded-sm shadow-lg border-4 border-paper z-10">
+                        <img src="assets/owner.webp" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800'" alt="Metho's Moma" class="relative w-full h-[500px] object-cover rounded-sm shadow-lg border-4 border-paper z-10">
                     </div>
                 </div>
 
                 <!-- Founder Content -->
                 <div class="w-full lg:w-7/12 space-y-6">
                     <span class="text-monpa-red font-bold tracking-widest uppercase text-sm">The Visionary Behind the Weave</span>
-                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-monpa-black">Miss Tenzin Metoh</h2>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-monpa-black">Metho's Moma</h2>
                     <h3 class="text-xl font-medium text-slate pb-4 border-b border-gray-300">Founder, Oro Bruk Federation</h3>
                     
                     <p class="text-slate leading-relaxed">
-                        Oro Bruk was born as a direct response to a changing climate and a deep love for Monpa heritage. Observing that traditional, heavy wool garments were increasingly being left in suitcases during Itanagar's scorching summers, Tenzin Metoh refused to let her culture fade into history.
+                        Oro Bruk was born as a direct response to a changing climate and a deep love for Monpa heritage. Observing that traditional, heavy wool garments were increasingly being left in suitcases during Itanagar's scorching summers, Metho's Moma refused to let her culture fade into history.
                     </p>
                     <p class="text-slate leading-relaxed">
                         She pioneered a revolution in indigenous fashion by adapting ancient Monpa weaves into breathable, weather-conscious fabrics like Eri silk, crepe, and light cottons—making the attire comfortable and wearable year-round.
@@ -179,8 +179,40 @@
         </div>
     </section>
 
+    <!-- Secretary Section -->
+    <section id="secretary" class="py-16 md:py-24 bg-paper border-y border-gray-200 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+                <!-- Secretary Image -->
+                <div class="w-full lg:w-5/12">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-monpa-yellow -translate-x-4 translate-y-4 rounded-sm"></div>
+                        <img src="assets/owner-1.webp" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800'" alt="Miss Tenzin Metoh" class="relative w-full h-[500px] object-cover rounded-sm shadow-lg border-4 border-monpa-white z-10">
+                    </div>
+                </div>
+
+                <!-- Secretary Content -->
+                <div class="w-full lg:w-7/12 space-y-6">
+                    <span class="text-monpa-red font-bold tracking-widest uppercase text-sm">Administrative Backbone</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-monpa-black">Miss Tenzin Metoh</h2>
+                    <h3 class="text-xl font-medium text-slate pb-4 border-b border-gray-300">Secretary, Oro Bruk Federation</h3>
+                    
+                    <p class="text-slate leading-relaxed">
+                        Serving as the operational cornerstone of the Oro Bruk Federation, Miss Tenzin Metoh ensures that our expansive vision translates into daily, impactful reality across the region.
+                    </p>
+                    <p class="text-slate leading-relaxed">
+                        Her leadership bridges the gap between traditional artisans and modern administrative efficiency. By managing community outreach and organizing cooperative frameworks, she provides local women and farmers with the structured support they need to thrive in a growing economy.
+                    </p>
+                    <p class="text-slate leading-relaxed">
+                        Beyond logistics, she is a nurturing presence within the federation, guiding our educational and sports initiatives with maternal care and a fierce dedication to the empowerment of the next generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Our Story Section -->
-    <section id="story" class="py-16 md:py-24 bg-monpa-red text-monpa-white relative">
+    <section id="story" class="py-16 md:py-24 bg-monpa-red text-monpa-white relative scroll-mt-28">
         <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a); background-position: 0 0, 10px 10px; background-size: 20px 20px;"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -188,7 +220,7 @@
                 <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6">From Loom to Legacy</h2>
                 <div class="w-24 h-1 bg-monpa-yellow mx-auto mb-8"></div>
                 <p class="text-lg text-monpa-white/90 leading-relaxed mb-6">
-                    Founded in 2020 by visionaries Tenzin Metoh and Genden Sangmo, Oro Bruk began as an apparel brand dedicated to bridging traditional North-East Indian attire with contemporary design. Our early years were defined by intensive R&D alongside master weavers in the Mon region to pioneer the first-ever coats in historic Monpa and nomadic Brokpa patterns.
+                    Founded in 2020 by visionaries Metho's Moma and Genden Sangmo, Oro Bruk began as an apparel brand dedicated to bridging traditional North-East Indian attire with contemporary design. Our early years were defined by intensive R&D alongside master weavers in the Mon region to pioneer the first-ever coats in historic Monpa and nomadic Brokpa patterns.
                 </p>
                 <p class="text-lg text-monpa-white/90 leading-relaxed">
                     Recognizing that true empowerment requires a holistic approach, Oro Bruk transformed into a comprehensive NGO in <strong>December 2024</strong>. Today, operating across Itanagar and Kalaktang, the Oro Bruk Federation stands as a unified force uplifting our people through textiles, agriculture, and youth development.
@@ -198,7 +230,7 @@
     </section>
 
     <!-- Core Pillars Section -->
-    <section id="pillars" class="py-16 md:py-24 bg-paper">
+    <section id="pillars" class="py-16 md:py-24 bg-paper scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-monpa-red font-bold tracking-widest uppercase text-sm mb-2 block">Our Foundation</span>
@@ -206,45 +238,80 @@
                 <p class="text-slate max-w-2xl mx-auto">Our multi-faceted approach ensures that economic growth, cultural preservation, and environmental stewardship go hand in hand.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-                <!-- Pillar 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                
+                <!-- Pillar 1: Handloom -->
                 <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
                     <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
-                        <i class="fas fa-layer-group text-2xl"></i>
+                        <i class="fas fa-rug text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Handloom & Textiles</h3>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Handloom</h3>
                     <p class="text-slate text-sm leading-relaxed">
-                        Preserving indigenous weaving techniques. We provide sustainable livelihoods for local women artisans on blackstrap looms, innovating traditional garments to reach global markets.
+                        Empowering indigenous artisans by reviving traditional blackstrap loom techniques, weaving ancient motifs into sustainable, world-class garments.
                     </p>
                 </div>
 
-                <!-- Pillar 2 -->
-                <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
-                    <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
-                        <i class="fas fa-seedling text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Agriculture & Co-ops</h3>
-                    <p class="text-slate text-sm leading-relaxed">
-                        Driving rural empowerment through strategic partnerships. Active leaders at the West Kameng Farmers Meet, collaborating with Kalaktang LAMPS and Mega Food Park (Dolikoto).
-                    </p>
-                </div>
-
-                <!-- Pillar 3 -->
+                <!-- Pillar 2: Education -->
                 <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
                     <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
                         <i class="fas fa-book-open-reader text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Environment & Education</h3>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Education</h3>
                     <p class="text-slate text-sm leading-relaxed">
-                        Uplifting regional youth and protecting our ecosystems. We integrate community-driven educational programs and sports initiatives to foster the next generation of leaders.
+                        Fostering holistic community growth by providing access to foundational learning, preserving tribal dialects, and equipping our youth with modern skills.
                     </p>
                 </div>
+
+                <!-- Pillar 3: Environment -->
+                <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
+                    <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
+                        <i class="fas fa-tree text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Environment</h3>
+                    <p class="text-slate text-sm leading-relaxed">
+                        Championing eco-conscious practices, from promoting natural, plant-based dyes to leading community conservation drives in the Himalayan foothills.
+                    </p>
+                </div>
+
+                <!-- Pillar 4: Sports -->
+                <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
+                    <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
+                        <i class="fas fa-running text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Sports</h3>
+                    <p class="text-slate text-sm leading-relaxed">
+                        Nurturing rural talent and promoting physical well-being by organizing regional tournaments that build leadership, teamwork, and lifelong resilience.
+                    </p>
+                </div>
+
+                <!-- Pillar 5: Agriculture -->
+                <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
+                    <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
+                        <i class="fas fa-wheat-awn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Agriculture</h3>
+                    <p class="text-slate text-sm leading-relaxed">
+                        Strengthening rural economies through strategic farmer cooperatives. We champion sustainable farming practices and connect local growers to wider markets.
+                    </p>
+                </div>
+
+                <!-- Pillar 6: Livestock & Cattle Feed -->
+                <div class="bg-white p-8 rounded-sm shadow-lg card-hover border-t-4 border-monpa-red">
+                    <div class="w-14 h-14 bg-monpa-red/10 rounded-full flex items-center justify-center mb-6 text-monpa-red">
+                        <i class="fas fa-cow text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-monpa-black mb-4">Livestock & Cattle Feed</h3>
+                    <p class="text-slate text-sm leading-relaxed">
+                        Enhancing the livelihoods of regional herders by supporting nomadic pastoral traditions, providing nutrient-rich feed, and ensuring the health of cattle and yaks.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Interactive Textile Catalog -->
-    <section id="catalog" class="py-16 md:py-24 bg-monpa-white border-y border-gray-200">
+    <section id="catalog" class="py-16 md:py-24 bg-monpa-white border-y border-gray-200 scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div class="max-w-2xl">
@@ -312,7 +379,7 @@
     </section>
 
     <!-- Community & Impact -->
-    <section id="impact" class="py-16 md:py-24 bg-paper">
+    <section id="impact" class="py-16 md:py-24 bg-paper scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
@@ -346,24 +413,24 @@
     </section>
 
     <!-- Footer & Contact Section -->
-    <footer id="contact" class="bg-monpa-black text-monpa-white pt-16 pb-8 border-t-[12px] border-monpa-red">
+    <footer id="contact" class="bg-monpa-black text-monpa-white pt-16 pb-8 border-t-[12px] border-monpa-red scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 
                 <!-- Brand Info -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6">
-                        <img src="assets/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=OB&background=fdfbf7&color=1a1a1a&size=56 rounded-full'" alt="Oro Bruk Logo" class="h-14 w-14 object-cover rounded-full bg-paper">
+                        <img src="assets/logo.png" onerror="this.src='https://ui-avatars.com/api/?name=OB&background=transparent&color=fdfbf7&size=80'" alt="Oro Bruk Logo" class="h-20 w-20 object-contain drop-shadow-sm">
                         <span class="font-serif font-bold text-xl tracking-wide">Oro Bruk</span>
                     </div>
                     <p class="text-sm text-monpa-white/70 leading-relaxed mb-6">
                         Empowering communities through handloom, agriculture, environment, education, and sports. By the people, for the people.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/oro_bruk" target="_blank" class="w-10 h-10 rounded-full bg-monpa-red flex items-center justify-center hover:bg-monpa-maroon transition-colors">
+                        <a href="https://www.instagram.com/oro_bruk" target="_blank" rel="noopener noreferrer" aria-label="Oro Bruk on Instagram" class="w-10 h-10 rounded-full bg-monpa-red flex items-center justify-center hover:bg-monpa-maroon transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/Oro.Bruk7" target="_blank" class="w-10 h-10 rounded-full bg-monpa-red flex items-center justify-center hover:bg-monpa-maroon transition-colors">
+                        <a href="https://www.facebook.com/Oro.Bruk7" target="_blank" rel="noopener noreferrer" aria-label="Oro Bruk on Facebook" class="w-10 h-10 rounded-full bg-monpa-red flex items-center justify-center hover:bg-monpa-maroon transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -424,31 +491,34 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
+        const header = document.getElementById('main-header');
+        const headerInner = document.getElementById('header-inner');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
         });
 
         // Close mobile menu on link click
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Navbar transparent on scroll effect
+        // Navbar size and pure transparency adjustment on scroll
         window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
             if (window.scrollY > 20) {
-                // Remove solid background and add transparent/blur
                 header.classList.remove('bg-paper');
-                header.classList.add('bg-transparent', 'backdrop-blur-md');
-                header.classList.replace('py-4', 'py-2');
+                header.classList.add('bg-transparent');
+                headerInner.classList.remove('py-4');
+                headerInner.classList.add('py-2');
             } else {
-                // Restore solid background at the top
                 header.classList.add('bg-paper');
-                header.classList.remove('bg-transparent', 'backdrop-blur-md');
-                header.classList.replace('py-2', 'py-4');
+                header.classList.remove('bg-transparent');
+                headerInner.classList.remove('py-2');
+                headerInner.classList.add('py-4');
             }
         });
     </script>
